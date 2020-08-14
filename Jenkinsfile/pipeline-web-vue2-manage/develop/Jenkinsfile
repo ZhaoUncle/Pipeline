@@ -1,0 +1,13 @@
+pipeline {
+    agent any;
+    environment { //环境变量
+		GREETING="Hello";
+    }
+    stages{
+        stage('打招呼') {
+            steps{
+            	sh 'echo "$GREETING $TITLE"'
+            }
+        }
+   }
+}
